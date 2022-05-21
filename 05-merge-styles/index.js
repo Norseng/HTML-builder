@@ -7,7 +7,7 @@ const filePath = path.join(distPath, 'bundle.css');
 readdir(stylesPath, {withFileTypes: true}, (err, files) => {
     if (err) console.log(err);
     else {
-        open(filePath, 'r+', (err) => {
+        open(filePath, 'a', (err) => {
             if (err) console.log(err);
         });
         truncate(filePath, err => {
