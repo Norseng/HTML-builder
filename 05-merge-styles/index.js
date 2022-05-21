@@ -1,10 +1,8 @@
-const {fs, readdir, readFile, appendFile} = require('fs');
+const {readdir, readFile, appendFile} = require('fs');
 const path = require('path');
 const distPath = path.join(__dirname, 'project-dist');
 const stylesPath = path.join(__dirname, 'styles');
 const filePath = path.join(distPath, 'bundle.css');
-
-
 
 readdir(stylesPath, {withFileTypes: true}, (err, files) => {
     if (err) console.log(err);
